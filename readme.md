@@ -1,3 +1,3 @@
 # React End Course Project
 
-To lunch the project, une : ```$ npm start```
+To lunch the project, use : ```$ npm start```
