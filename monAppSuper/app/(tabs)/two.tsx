@@ -1,33 +1,37 @@
-import { StyleSheet } from 'react-native';
-import { StyledSectionList } from '@/components/SectionList';
-import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
-import { AfficherListe } from '@/components/listComponent';
+import { Button, StyleSheet } from 'react-native';
+import { View } from '@/components/Themed';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { MonoText } from '@/components/StyledText';
+
 
 export default function TabTwoScreen() {
+  
+  async function storeThemeName(value: string) {
+    try {
+      await AsyncStorage.setItem('themeName', value)
+    } catch (e) {
+    }
+  }
+  
+
   return (
-    <View>
-      
-      <AfficherListe/>
+    <View style={styles.container}>
+      <Button title="Thème sombre" onPress= { () => storeThemeName("dark")} />
+      <Button title="Thème clair" onPress={ () =>storeThemeName("light")} />
+      <Button title="Blue" onPress={ () =>storeThemeName("blue")} />
+      <MonoText/>
     </View>
-    
   );
 }
-//<StyledSectionList/>
-//<View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)"  />
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'rgba(52, 52, 52, 0)'
   },
-  title: {
+  Button: {
     fontSize: 20,
     fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
   },
 });

@@ -7,7 +7,7 @@ export function HomeScreen() {
 
   return (
     <NavigationContainer independent={true}>
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(52, 52, 52, 0)' }}>
         <Text>Home Screen</Text>
         <Button title="Go to Modal2" onPress={() => navigation.navigate('modal2')} />
       </View>

@@ -8,7 +8,7 @@ import { HomeScreen } from '@/components/HomeScreen';
 
 export default function TabThreeScreen() {
   return (
-    <View>
+    <View style={{backgroundColor: 'rgba(52, 52, 52, 0)'}}>
       <HomeScreen/>
       <img src="https://c.tenor.com/1ssDwtDeM7oAAAAM/disappear.gif"/>
     </View>

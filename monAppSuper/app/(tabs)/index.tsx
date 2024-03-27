@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native';
 
-import EditScreenInfo from '@/components/EditScreenInfo';
 import { Text,View } from '@/components/Themed';
 
 import { ColorText } from '@/components/ColorText';
@@ -9,9 +8,16 @@ import { ConditionCard } from '@/components/conditionButton';
 import { Counter } from '@/components/CompteurMoreLess';
 import Loader from '@/components/Loader';
 import { CountTime } from '@/components/CountTime';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 
+async function storeThemeName(value: string) {
+  try {
+    await AsyncStorage.setItem('themeName', value)
+  } catch (e) {
+  }
+}
 
 export default function TabOneScreen()  {
   return (
@@ -22,8 +28,6 @@ export default function TabOneScreen()  {
         
         <View style={styles.separator} />
         <CustomButton style={styles.title}><Text>Test log</Text></CustomButton>
-        <CustomButton style={styles.title}><Text>Black theme</Text></CustomButton>
-
         
         <Counter/>
         
@@ -37,6 +41,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'rgba(52, 52, 52, 0)'
   },
   title: {
     fontSize: 20,
