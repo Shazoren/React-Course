@@ -54,7 +54,7 @@ export function AfficherListe() {
       <FlatList 
         data={items}
         keyExtractor={(item) => item.id}
-        renderItem={({ item, index }) => (
+        renderItem={({ item, index }) => ( //Affichage via une boucle
           <View>
             <Text style= {styles.Data}>{item.name}</Text>
             <TouchableOpacity style={styles.button} onPress={() => dispatch({ type: 'remove', index })}><Text style={styles.buttonText}>Remove</Text></TouchableOpacity>

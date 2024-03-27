@@ -3,6 +3,7 @@ import { View } from '@/components/Themed';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { MonoText } from '@/components/StyledText';
 import { AfficherListe } from '@/components/listComponent';
+import { ConditionCard } from '@/components/conditionButton';
 
 
 export default function TabTwoScreen() {
@@ -20,6 +21,7 @@ export default function TabTwoScreen() {
       <Button title="Thème clair" onPress={ () =>storeThemeName("light")} />
       <Button title="Blue" onPress={ () =>storeThemeName("blue")} />
       <View style={styles.separator} />
+      <ConditionCard/>
       <AfficherListe/>
       
     </View>

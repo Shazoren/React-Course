@@ -1,16 +1,17 @@
 import { StyleSheet } from 'react-native';
-import EditScreenInfo from '@/components/EditScreenInfo';
 import { Text, View } from '@/components/Themed';
-import { Button } from 'react-native';
 
 import { HomeScreen } from '@/components/HomeScreen';
+import { StyledSectionList } from '@/components/SectionList';
+import { MonoText } from '@/components/StyledText';
 
 
 export default function TabThreeScreen() {
   return (
     <View style={{backgroundColor: 'rgba(52, 52, 52, 0)'}}>
       <HomeScreen/>
-      <img src="https://c.tenor.com/1ssDwtDeM7oAAAAM/disappear.gif"/>
+      <MonoText/>
+      <StyledSectionList/>
     </View>
     
   );

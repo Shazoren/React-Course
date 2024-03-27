@@ -20,9 +20,9 @@ const ConditionButton = ({ loading, error, title }:{loading:boolean, error: bool
 }
 
 export function ConditionCard() {
-    return (
+    return (//Affichage conditionnel
       <View>
-        <ConditionButton error={true} loading={false} title="Test Erroné"/>
+        <ConditionButton error={true} loading={false} title="Test Erroné"/> 
         <ConditionButton error={false} loading={true} title="Test en Chargement"/>
         <ConditionButton error={false} loading={false} title="Test Réussi"/>
       </View>
