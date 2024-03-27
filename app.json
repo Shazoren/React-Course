@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "monAppSuper",
+    "owner": "kafefake",
     "slug": "monAppSuper",
     "version": "1.0.0",
     "orientation": "portrait",
