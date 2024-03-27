@@ -2,6 +2,7 @@ import { Button, StyleSheet } from 'react-native';
 import { View } from '@/components/Themed';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { MonoText } from '@/components/StyledText';
+import { AfficherListe } from '@/components/listComponent';
 
 
 export default function TabTwoScreen() {
@@ -12,14 +13,15 @@ export default function TabTwoScreen() {
     } catch (e) {
     }
   }
-  
 
   return (
     <View style={styles.container}>
       <Button title="Thème sombre" onPress= { () => storeThemeName("dark")} />
       <Button title="Thème clair" onPress={ () =>storeThemeName("light")} />
       <Button title="Blue" onPress={ () =>storeThemeName("blue")} />
-      <MonoText/>
+      <View style={styles.separator} />
+      <AfficherListe/>
+      
     </View>
   );
 }
@@ -34,4 +36,11 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
   },
+  separator: {
+    marginVertical: 30,
+    height: 1,
+    width: '80%',
+  },
 });
+
+
