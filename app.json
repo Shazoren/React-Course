@@ -22,9 +22,9 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff",
-        "package": "com.ymc.coursreact"
-      }
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.ymc.coursreact"
     },
     "web": {
       "bundler": "metro",
